@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle{
+
+	int height;
+	int width;
+	public:
+		Rectangle(){
+		
+			cout<<"The height is:"<<endl;
+			cin>>height;
+			cout<<"The width is"<<endl;
+			cin>>width;
+		}
+		void display(){
+			cout<<height<<endl;
+			cout<<width<<endl;
+		}
+		Rectangle(int x,int y ){
+			height = x;
+			width = y;
+		}
+		Rectangle(Rectangle& object2){
+			height = object2.height;
+			width = object2.width;
+		}
+			};
+int main(){
+	Rectangle object1;
+	object1.display();
+	Rectangle object2(20,15);
+	object2.display();
+	Rectangle object3(object2);
+	object3.display();
+	
+	}
